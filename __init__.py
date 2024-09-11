@@ -31,9 +31,7 @@ def meteo():
 def mongraphique():
     return render_template("graphique.html")
 
-Réduire
-dalia.hmtl.txt
-4 Ko
+
 @app.route('/commits/')
 def index():
     return render_template('commits.html')
