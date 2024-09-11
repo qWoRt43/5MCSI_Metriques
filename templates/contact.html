@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact Us</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+      color: #333;
+    }
+    .container {
+      max-width: 800px;
+      margin: 20px auto;
+      padding: 20px;
+      background: #fff;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      border-radius: 8px;
+    }
+    h2 {
+      color: #007BFF;
+      margin-bottom: 20px;
+    }
+    p {
+      margin: 10px 0;
+    }
+    .contact-info {
+      margin-bottom: 20px;
+    }
+    .contact-info dt {
+      font-weight: bold;
+      margin-top: 10px;
+    }
+    .contact-info dd {
+      margin: 0 0 10px 0;
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+    }
+    form input, form textarea {
+      margin-bottom: 10px;
+      padding: 10px;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      font-size: 16px;
+    }
+    form button {
+      padding: 10px 15px;
+      border: none;
+      border-radius: 4px;
+      background-color: #007BFF;
+      color: #fff;
+      font-size: 16px;
+      cursor: pointer;
+    }
+    form button:hover {
+      background-color: #0056b3;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Contact Us</h2>
+    <div class="contact-info">
+      <dl>
+        <dt>Email:</dt>
+        <dd>contact@yourdomain.com</dd>
+        <dt>Phone:</dt>
+        <dd>+1 234 567 890</dd>
+        <dt>Address:</dt>
+        <dd>123 Your Street, Your City, Your Country</dd>
+      </dl>
+    </div>
+    <h3>Get in Touch</h3>
+    <form action="/submit-form" method="post">
+      <input type="text" name="name" placeholder="Your Name" required />
+      <input type="email" name="email" placeholder="Your Email" required />
+      <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </div>
+</body>
+</html>
