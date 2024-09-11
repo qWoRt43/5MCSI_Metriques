@@ -30,6 +30,22 @@ def meteo():
 @app.route("/rapport/")
 def mongraphique():
     return render_template("graphique.html")
+
+Réduire
+dalia.hmtl.txt
+4 Ko
+@app.route('/commits/')
+def index():
+    return render_template('commits.html')
+
+@app.route('/extract-minutes/<date_string>')
+def extract_minutes(date_string):
+    try:
+        date_object = datetime.strptime(date_string, '%Y-%m-%dT%H:%M:%SZ')
+        minutes = date_object.strftime('%Y-%m-%d %H:%M')  # Format minute
+        return jsonify({'minutes': minutes})
+    except ValueError:
+        return jsonify({'error': 'Invalid date format. Use the following format: YYYY-MM-DDTHH:MM:SSZ'}), 400
   
 if __name__ == "__main__":
   app.run(debug=True)
